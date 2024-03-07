@@ -7,10 +7,10 @@ ActiveAdmin.register Department do
     end
     f.inputs do
       f.has_many :departments_cities, allow_destroy: true do |city|
-        city.input :city_id, as: :nested_select, required: true,
-                             level_1: { attribute: :country_id },
-                             level_2: { attribute: :region_id },
-                             level_3: { attribute: :city_id }
+        city.input :city, as: :nested_select, required: true,
+                             level_1: { attribute: :country },
+                             level_2: { attribute: :region },
+                             level_3: { attribute: :city }
       end
     end
     f.actions

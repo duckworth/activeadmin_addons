@@ -4,7 +4,7 @@ class City < ActiveRecord::Base
   has_many :departments, through: :departments_cities
 
   def self.ransackable_attributes(_auth_object = nil)
-    ["created_at", "id", "information", "name", "region_id", "updated_at"]
+    ["created_at", "id", "information", "name", "region_id", "updated_at", "departments_cities_id", "departments_cities_department_id"]
   end
 
   def self.ransackable_associations(_auth_object = nil)
